@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body {
+            cursor: none;
+        }
+
+        div {
+            cursor: none;
+            position: absolute;
+            background-image: url("favicon.ico");
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+    <link href="favicon.ico" rel="icon">
+    <title>Apple Cursor | It's so cool!</title>
+    </link>
+</head>
+<body>
+<div id="mouse"></div>
+<script>
+    let mouse = document.getElementById("mouse");
+
+    document.addEventListener("mousemove", function (event) {
+        let x = event.clientX;
+        let y = event.clientY;
+
+        mouse.style.left = x + "px";
+        mouse.style.top = y + "px";
+    });
+</script>
+</body>
+</html>
